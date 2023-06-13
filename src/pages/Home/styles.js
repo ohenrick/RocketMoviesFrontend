@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   width: 100%;
@@ -49,7 +50,7 @@ export const HeaderPage = styled.div`
 
 `;
 
-export const NewMovie = styled.div`
+export const NewMovie = styled(Link)`
     grid-area: newmovie;
     border: none;
     display: flex;

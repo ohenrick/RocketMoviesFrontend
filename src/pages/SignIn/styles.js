@@ -38,6 +38,13 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.COLORS.COLOR_GRAY2};
   }
 
+  .InputL1 {
+    margin-top: -20px;
+  }
+  .InputL2 {
+    margin-top: -20px;
+  }
+
   > button:first-of-type {
     margin-bottom: 42px;
     margin-top: 24px;

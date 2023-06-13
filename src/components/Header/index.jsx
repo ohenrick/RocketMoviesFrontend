@@ -1,7 +1,7 @@
 import { Container, Profile } from "./styles";
 import { Input } from '../Input/index'
 
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export function Header() {
   return (
@@ -10,7 +10,7 @@ export function Header() {
 
       <Input placeholder='Pesquisar pelo título' />
 
-      <Profile>
+      <Profile to="/profile">
         <div>
           <strong>Henrique Santos</strong>
           <a href="/"><span>sair</span></a>

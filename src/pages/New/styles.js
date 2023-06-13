@@ -22,7 +22,7 @@ export const Container = styled.div`
       background: rgba(0, 0, 0, 0);
     }
     ::-webkit-scrollbar-thumb {
-      background-color: ${({ theme }) => theme.COLORS.PINK};
+      background-color: ${({ theme }) => theme.COLORS.PINK_10};
       border-radius: 100px;
     }
     ::-webkit-scrollbar-button:start:decrement {
@@ -30,7 +30,6 @@ export const Container = styled.div`
       display: block;
       background-color: transparent;
     }
-
   }
 `;
 
@@ -39,11 +38,11 @@ export const Form = styled.form`
   margin: 40px auto;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 
-  .Input_top {
+  .InputC1 {
     display: flex;
-    gap: 40px;  
+    gap: 40px;
   }
 
   .Tags {
@@ -53,23 +52,18 @@ export const Form = styled.form`
       display: block;
       font-size: 20px;
       font-weight: 400;
-
-      color: ${({ theme }) => theme.COLORS.GRAY_200};
-
       margin-bottom: 24px;
+      color: ${({ theme }) => theme.COLORS.COLOR_GRAY2};
     }
 
     .Moviesection {
       display: flex;
       gap: 24px;
       flex-wrap: wrap;
-
       width: 100%;
-
       padding: 16px;
       border-radius: 8px;
-
-      background-color: ${({ theme }) => theme.COLORS.BLACK};
+      background-color: ${({ theme }) => theme.COLORS.GRAY_40};
     }
   }
   

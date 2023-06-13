@@ -38,6 +38,16 @@ export const Form = styled.form`
     color: ${({ theme }) => theme.COLORS.COLOR_GRAY2};
   }
 
+  .InputR1 {
+    margin-top: -20px;
+  }
+  .InputR2 {
+    margin-top: -20px;
+  }
+  .InputR3 {
+    margin-top: -20px;
+  }
+
   > button:first-of-type {
     margin-bottom: 42px;
     margin-top: 24px;
@@ -55,6 +65,8 @@ export const Form = styled.form`
       margin-right: 8px;
     }
   }
+
+  
 `;
 
 
