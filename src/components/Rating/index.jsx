@@ -1,20 +1,15 @@
-import { TiStarOutline, TiStarFullOutline } from 'react-icons/ti'
-import { Container } from './styles'
+import { Container } from './styles';
+import { VscStarFull, VscStarEmpty } from "react-icons/vsc";
 
-export function Rating({ rate }) {
-  const stars = []
-
-  for (let i = 0; i < 5; i++) {
-    let star = i < rate ? TiStarFullOutline : TiStarOutline
-
-    stars.push(star)
+export function Rating({ grade, isBigSize }) {
+  let stars = [];
+  for (let cont = 1; cont <= 5; cont++) {
+    if (cont <= grade) {
+      stars.push(<VscStarFull key={cont} />);
+    } else {
+      stars.push(<VscStarEmpty key={cont} />);
+    }
   }
 
-  return (
-    <Container>
-      {stars.map((Star, i) => (
-        <Star key={i} />
-      ))}
-    </Container>
-  );
+  return <Container isBigSize={isBigSize}>{stars}</Container>;
 }
