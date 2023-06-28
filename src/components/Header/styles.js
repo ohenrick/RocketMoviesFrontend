@@ -25,7 +25,7 @@ export const Container = styled.header`
     }
 `;
 
-export const Profile = styled(Link)`
+export const Profile = styled.div`
     width: 198px;
     height: 68px;
     display: flex;
@@ -33,13 +33,6 @@ export const Profile = styled(Link)`
     gap: 18px;
     margin-top: 30px;
     margin-left: 64px;
-
-    > img {
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-        margin-right: 196px;
-    }
 
     > div {
         display: flex;
@@ -52,12 +45,20 @@ export const Profile = styled(Link)`
         strong {
             color: ${({ theme }) => theme.COLORS.COLOR_GRAY1};
             font-weight: 700;
+            margin-bottom: 2px;
         }
 
         span {
             color: ${({ theme }) => theme.COLORS.COLOR_GRAY2};
         }
     }
-
 `;
 
+export const ToProfile = styled(Link)`
+    > img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        margin-right: 196px;
+    }
+`;
