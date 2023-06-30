@@ -1,28 +1,48 @@
-import { Container, Profile, ToProfile } from "./styles";
-import { Input } from '../Input/index'
 import { useAuth } from "../../hooks/auth";
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
-export function Header() {
-  const { signOut } = useAuth();
+import { api } from '../../services/api';
+import avatarPlaceholder from '../../assets/avatar_placeholder.svg';
+
+import { Container, Profile, Logo, ToProfile } from "./styles";
+import { Input } from '../Input/index'
+
+export function Header({ onSearch }) {
+  const { signOut, user } = useAuth();
+  const [search, setSearch] = useState("");
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+
+  const navigate = useNavigate()
+
+  function handleToHome() {
+    navigate("/")
+  }
 
   return (
     <Container>
-      <h1>RocketMovies</h1>
+      <Logo onClick={handleToHome}>
+      RocketMovies
+      </Logo>
 
-      <Input placeholder='Pesquisar pelo título' />
+      <Input
+      onClick={handleToHome} 
+      placeholder='Pesquisar pelo título'
+      onChange={(e) => setSearch(e.target.value)}
+      />
 
       <Profile>
       <div>
         <ToProfile to="/profile">
-          <strong>Henrique Santos</strong>
+          <strong>{user.name}</strong>
         </ToProfile>
         <a onClick={signOut}><span>sair</span></a>
       </div>
       <ToProfile to="/profile">
-        <img src="https://github.com/ohenrick.png" alt="Foto do Usuário" />
+        <img src={avatarUrl} alt={user.name} />
       </ToProfile>
-      </Profile>
+      </Profile> 
     </Container>
   );
 }

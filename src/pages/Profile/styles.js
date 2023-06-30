@@ -25,6 +25,14 @@ export const Container = styled.div`
             font-weight: 400;
             line-height: 21px;
         }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 17px;
+            color: ${({ theme }) => theme.COLORS.PINK_10}
+            
+        }
     }
 `;
 

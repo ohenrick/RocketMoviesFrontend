@@ -1,72 +1,44 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
 
-    display: grid;
-    grid-template-rows: 116px auto;
-    grid-template-areas: 
+  display: grid; 
+  grid-template-rows: 105px auto;
+  grid-template-areas: 
     "header"
     "content";
-
-    > main {
-      grid-area: content;
-      overflow-y: auto;
-      padding: 64px 0;
-    }
 `;
 
-export const Content = styled.div`
-  max-width: 1130px;
-  margin: 0 auto;
-
+export const Author = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 
-  > p {
-    font-size: 16px;
+  margin-top: 24px;
+
+  span {
     font-weight: 400;
-    margin-top: 40px;
-    text-align: justify;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: ${({ theme }) => theme.COLORS.WHITE};
+  }
+
+  > img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  > svg {
+    width: 16px;
+    height: 16px;
+    color: ${({ theme }) => theme.COLORS.PINK_10};
   }
 `;
 
-export const HeaderMovie = styled.div`
-  .MT {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-
-    span {
-      margin-right: 10px;
-    }
-
-    svg {
-      color: ${({ theme }) => theme.COLORS.PINK_10};
-      font-size: 20px;
-    }
-  }
-
-  .CN {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 40px;
-
-    img {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      border: 1px solid;
-    }
-
-    svg {
-      color: ${({ theme }) => theme.COLORS.PINK_10};
-    }
-  }
-`;
-
-export const TagS = styled.div`
-  margin: 5px 0;
+export const Tags = styled.div`
+  margin-block: 40px;
 `;

@@ -15,14 +15,16 @@ export const Container = styled.header`
     
     padding: 0 123px;
 
-    > h1 {
-      display: flex;
-      align-items: center;
-      font-size: 24px;
-      color: ${({ theme }) => theme.COLORS.PINK_10};
-      font-weight: 700;
-      margin-right: 90px;
-    }
+`;
+
+export const Logo = styled.h1`
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: ${({ theme }) => theme.COLORS.PINK_10};
+    font-weight: 700;
+    margin-right: 90px;
+    cursor: pointer;
 `;
 
 export const Profile = styled.div`
