@@ -27,6 +27,10 @@ export const Logo = styled.h1`
     cursor: pointer;
 `;
 
+export const Search = styled.div`
+    width: 60%;
+`;
+
 export const Profile = styled.div`
     width: 198px;
     height: 68px;
